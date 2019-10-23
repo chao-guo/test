@@ -1,4 +1,4 @@
-package test.spring.aop.proxy.cglibProxy;
+package test.spring.aop.b_factoryBean;
 
 public class MyAspect {
 

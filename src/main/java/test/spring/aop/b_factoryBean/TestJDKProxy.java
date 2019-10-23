@@ -1,8 +1,8 @@
-package test.spring.aop.proxy.cglibProxy;
+package test.spring.aop.b_factoryBean;
 
 import org.junit.Test;
 
-public class TestCGLIB {
+public class TestJDKProxy {
 
 	@Test
 	public void demo() {

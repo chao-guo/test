@@ -1,4 +1,4 @@
-package test.spring.aop.proxy.cglibProxy;
+package test.spring.aop.a_proxy.cglibProxy;
 
 import java.lang.reflect.Method;
 

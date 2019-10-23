@@ -1,18 +1,15 @@
-package test.spring.aop.proxy.jdkProxy;
+package test.spring.aop.a_proxy.cglibProxy;
 
-public class UserServiceImpl implements UserService {
+public class UserService {
 
-	@Override
 	public void addUser() {
 		System.out.println("aop.proxy addUser");
 	}
 
-	@Override
 	public void deleteUser() {
 		System.out.println("aop.proxy deleteUser");
 	}
 
-	@Override
 	public void updateUser() {
 		System.out.println("aop.proxy updateUser");
 	}

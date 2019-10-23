@@ -1,4 +1,4 @@
-package test.spring.aop.proxy.jdkProxy;
+package test.spring.aop.a_proxy.jdkProxy;
 
 public interface UserService {
 

@@ -1,4 +1,4 @@
-package test.spring.aop.proxy.jdkProxy;
+package test.spring.aop.b_factoryBean;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
