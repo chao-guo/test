@@ -3,4 +3,4 @@
 *.project
 *.class
 *.properties
-/target/
+/target
