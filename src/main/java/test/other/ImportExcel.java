@@ -185,7 +185,7 @@ public class ImportExcel {
 			tag.put("tagCode", dataList.get(i).get(4).toString());
 			tages.add(tag);
 			JSONObject json = JSONObject.fromObject(tag);
-//			System.out.println(json);
+			System.out.println(json);
 		}
 		System.out.println("共" + tages.size() + "条数据");
 		JSONArray json = new JSONArray();

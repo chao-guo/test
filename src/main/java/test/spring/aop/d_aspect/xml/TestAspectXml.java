@@ -1,14 +1,14 @@
-package test.spring.aop.c_spring_aop;
+package test.spring.aop.d_aspect.xml;
 
 import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class TestSpringAop {
+public class TestAspectXml {
 
 	@Test
 	public void demo() {
 
-		String xmlPath ="beans_spring_aop.xml";
+		String xmlPath ="beans_aspect_xml.xml";
 		ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext(xmlPath);
 		UserService userService = (UserService) applicationContext.getBean("userServiceId");
 		userService.addUser();

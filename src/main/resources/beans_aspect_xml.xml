@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       					   http://www.springframework.org/schema/beans/spring-beans.xsd
+       					   http://www.springframework.org/schema/aop
+       					   https://www.springframework.org/schema/aop/spring-aop.xsd">
+	<!-- 1 目标类 -->
+	<bean id="userServiceId"
+		class="test.spring.aop.d_aspect.xml.UserServiceImpl"></bean>
+	<!-- 2 切面类 -->
+	<bean id="myAspectId"
+		class="test.spring.aop.d_aspect.xml.MyAspect"></bean>
+	<!-- 3 aop编程
+		 <aop:aspect> 将切面类申明"切面",从而获得通知(方法)
+			ref 切面类引用
+		<aop:pointcut> 声明一个切入点，所有通知都可以使用。
+			expression 切入点表达式
+			id 名称，用于其他通知引用
+		3.1 前置通知
+		<aop:config>
+			<aop:aspect ref="myAspectId">
+				<aop:pointcut expression="execution(* test.spring.aop.d_aspect.xml.UserServiceImpl.*(..))" id="myPointCut" />
+				<aop:before method="myBefore" pointcut-ref="myPointCut"/>
+			</aop:aspect>
+		</aop:config>
+		3.2后置通知
+		 <aop:config>
+		 	<aop:aspect ref="myAspectId">
+		 		<aop:pointcut expression="execution(* test.spring.aop.d_aspect.xml.UserServiceImpl.*(..))" id="myPointCut" />
+		 		<aop:after-returning method="myAfterReturning" pointcut-ref="myPointCut" returning="ret"/>
+		 	</aop:aspect>
+		 </aop:config>
+		3.3环绕通知
+	 <aop:config>
+	 	<aop:aspect ref="myAspectId">
+		 	<aop:pointcut expression="execution(* test.spring.aop.d_aspect.xml.UserServiceImpl.*(..))" id="myPointCut" />
+		 	<aop:around method="myArund" pointcut-ref="myPointCut"/>
+	 	</aop:aspect>
+	 </aop:config>
+	 	3.4抛出异常通知
+	 <aop:config>
+	 	<aop:aspect ref="myAspectId">
+		 	<aop:pointcut expression="execution(* test.spring.aop.d_aspect.xml.UserServiceImpl.*(..))" id="myPointCut" />
+	 		<aop:after-throwing method="myAfterThrowing" pointcut-ref="myPointCut" throwing="e"/>
+	 	</aop:aspect>
+	 </aop:config>
+	 	3.5最终通知
+	 -->
+	 <aop:config>
+	 	<aop:aspect ref="myAspectId">
+		 	<aop:pointcut expression="execution(* test.spring.aop.d_aspect.xml.UserServiceImpl.*(..))" id="myPointCut" />
+		 	<aop:after method="myAfter" pointcut-ref="myPointCut"/>
+	 	</aop:aspect>
+	 </aop:config>
+</beans>
