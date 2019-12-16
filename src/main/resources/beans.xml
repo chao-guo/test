@@ -4,9 +4,9 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
        					   http://www.springframework.org/schema/beans/spring-beans.xsd">
    	<!-- 创建目标类 -->
-   	<bean id="userServiceId" class="test.spring.aop.b_factoryBean.UserServiceImpl"></bean>
+   	<bean id="userServiceId" class="chao.spring.aop.b_factoryBean.UserServiceImpl"></bean>
    	<!-- 创建切面类 -->
-   	<bean id="myAspectId" class="test.spring.aop.b_factoryBean.MyAspect"></bean>
+   	<bean id="myAspectId" class="chao.spring.aop.b_factoryBean.MyAspect"></bean>
    	<!-- 创建代理类
    		*使用工厂bean FactoryBean，底层调用getObject() 返回特殊bean
    		*ProxyFactoryBean 用于创建一个代理的工厂bean，生产特殊的代理对象
@@ -23,7 +23,7 @@
 			如果声明 optimize = true ，无论是否有接口，都采用cglib
    	 -->
    	<bean id="proxyServiceId" class="org.springframework.aop.framework.ProxyFactoryBean">
-   		<property name="interfaces" value="test.spring.aop.b_factoryBean.UserService"></property>
+   		<property name="interfaces" value="chao.spring.aop.b_factoryBean.UserService"></property>
    		<property name="target" ref="userServiceId"></property>
 		<property name="interceptorNames" value="myAspectId"></property>
    	</bean>

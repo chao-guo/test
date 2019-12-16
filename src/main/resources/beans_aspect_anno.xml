@@ -10,7 +10,7 @@
        					   http://www.springframework.org/schema/aop
        					   https://www.springframework.org/schema/aop/spring-aop.xsd">
     <!-- 扫描所有的注解 -->
-    <context:component-scan base-package="test.spring"/>
+    <context:component-scan base-package="chao.spring"/>
     <!-- aop的注解生效 -->
     <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
 </beans>

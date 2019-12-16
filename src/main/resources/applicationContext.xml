@@ -3,9 +3,9 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
        					   http://www.springframework.org/schema/beans/spring-beans.xsd">
-	<bean id="appDaoa" class="test.spring.dao.AppDaoImpl" init-method="appInit" destroy-method="appDestroy"></bean>
-	<bean id="appService" class="test.spring.service.AppServiceImpl">
+	<bean id="appDaoa" class="chao.spring.dao.AppDaoImpl" init-method="appInit" destroy-method="appDestroy"></bean>
+	<bean id="appService" class="chao.spring.service.AppServiceImpl">
 		<property name="appDao" ref="appDaoa"></property>
 	</bean>
-	<bean id="beanPostProcessor" class="test.spring.util.MyBeanPostProcessor"></bean>
+	<bean id="beanPostProcessor" class="chao.spring.util.MyBeanPostProcessor"></bean>
 </beans>

@@ -8,10 +8,10 @@
        					   https://www.springframework.org/schema/aop/spring-aop.xsd">
 	<!-- 1 目标类 -->
 	<bean id="userServiceId"
-		class="test.spring.aop.d_aspect.xml.UserServiceImpl"></bean>
+		class="chao.spring.aop.d_aspect.xml.UserServiceImpl"></bean>
 	<!-- 2 切面类 -->
 	<bean id="myAspectId"
-		class="test.spring.aop.d_aspect.xml.MyAspect"></bean>
+		class="chao.spring.aop.d_aspect.xml.MyAspect"></bean>
 	<!-- 3 aop编程
 		 <aop:aspect> 将切面类申明"切面",从而获得通知(方法)
 			ref 切面类引用
@@ -21,21 +21,21 @@
 		3.1 前置通知
 		<aop:config>
 			<aop:aspect ref="myAspectId">
-				<aop:pointcut expression="execution(* test.spring.aop.d_aspect.xml.UserServiceImpl.*(..))" id="myPointCut" />
+				<aop:pointcut expression="execution(* chao.spring.aop.d_aspect.xml.UserServiceImpl.*(..))" id="myPointCut" />
 				<aop:before method="myBefore" pointcut-ref="myPointCut"/>
 			</aop:aspect>
 		</aop:config>
 		3.2后置通知
 		 <aop:config>
 		 	<aop:aspect ref="myAspectId">
-		 		<aop:pointcut expression="execution(* test.spring.aop.d_aspect.xml.UserServiceImpl.*(..))" id="myPointCut" />
+		 		<aop:pointcut expression="execution(* chao.spring.aop.d_aspect.xml.UserServiceImpl.*(..))" id="myPointCut" />
 		 		<aop:after-returning method="myAfterReturning" pointcut-ref="myPointCut" returning="ret"/>
 		 	</aop:aspect>
 		 </aop:config>
 		3.3环绕通知
 	 <aop:config>
 	 	<aop:aspect ref="myAspectId">
-		 	<aop:pointcut expression="execution(* test.spring.aop.d_aspect.xml.UserServiceImpl.*(..))" id="myPointCut" />
+		 	<aop:pointcut expression="execution(* chao.spring.aop.d_aspect.xml.UserServiceImpl.*(..))" id="myPointCut" />
 		 	<aop:around method="myArund" pointcut-ref="myPointCut"/>
 	 	</aop:aspect>
 	 </aop:config>
@@ -50,7 +50,7 @@
 	 -->
 	 <aop:config>
 	 	<aop:aspect ref="myAspectId">
-		 	<aop:pointcut expression="execution(* test.spring.aop.d_aspect.xml.UserServiceImpl.*(..))" id="myPointCut" />
+		 	<aop:pointcut expression="execution(* chao.spring.aop.d_aspect.xml.UserServiceImpl.*(..))" id="myPointCut" />
 		 	<aop:after method="myAfter" pointcut-ref="myPointCut"/>
 	 	</aop:aspect>
 	 </aop:config>
