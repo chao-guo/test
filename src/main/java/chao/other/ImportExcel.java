@@ -171,7 +171,7 @@ public class ImportExcel {
 
 	public static void main(String[] args) throws Exception {
 //              excel 导入数据demo
-		File file = new File("E:\\工作\\数据湖\\交接\\数据湖\\临时方案版本数据湖\\新建\\茂名新增实时位号信息19-10-14.xlsx");
+		File file = new File("E:\\工作\\数据湖\\交接\\数据湖\\生产环境\\临时方案版本数据湖\\新建\\茂名新增实时位号信息2020-01-07.xlsx");
 		List<List<Object>> dataList = importExcel(file);
 		List<Map<String, String>> tages = new ArrayList<Map<String, String>>();
 
@@ -192,7 +192,7 @@ public class ImportExcel {
 		json.addAll(tages);
 //		System.out.println(json.toString());
 		// 写入json文件
-		File writeName = new File("E:\\工作\\数据湖\\交接\\数据湖\\临时方案版本数据湖\\新建\\茂名新增实时位号信息19-10-14.json");
+		File writeName = new File("E:\\工作\\数据湖\\交接\\数据湖\\生产环境\\临时方案版本数据湖\\新建\\茂名新增实时位号信息2020-01-07.json");
 		writeName.createNewFile(); // 创建新文件,有同名的文件的话直接覆盖
 		try (FileWriter writer = new FileWriter(writeName); BufferedWriter out = new BufferedWriter(writer)) {
 			out.write(json.toString()); // \r\n即为换行
