@@ -21,7 +21,10 @@ public class Test {
         SqlParserUtil test=new SqlParserUtil();
 //        String result=test.getParsedSql(testSql);
         List<SqlSegment> result=test.getParsedSqlList(testSql);//保存解析结果
-        System.out.println(result);
+        result.forEach(i -> {
+        	System.out.println(i.getBody());
+        });
+//        System.out.println(result);
     }
 
 }
