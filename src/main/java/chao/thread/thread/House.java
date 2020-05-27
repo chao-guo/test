@@ -1,4 +1,4 @@
-package chao.thread;
+package chao.thread.thread;
 
 public class House implements Runnable {
 
