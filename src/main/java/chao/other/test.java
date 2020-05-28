@@ -6,6 +6,8 @@ import java.util.function.Consumer;
 
 public class test {
 
+	static Consumer<String> cout = System.out::println;
+
 	public static void main(String[] args) {
 		/*
 		 * String aaa = "##aaa##+##bbb#aaa"; String bbb =
@@ -16,13 +18,14 @@ public class test {
 		 * Pattern.compile(pattern3); Matcher m = p.matcher(sq); while (m.find()) {
 		 * m.group(); System.out.println(m.group()); }
 		 */
-
-		Consumer<String> methodParam = System.out::println;
-		methodParam.accept("aaasdfsf");
 		List<Integer> a = new ArrayList<Integer>();
-		markList1(a,10);
+		markList1(a, 10);
 		a.forEach(System.out::println);
 
+		Student student = new Student("gc", 1);
+		cout.accept("student:" + student);
+		new test().aaa(student, "aaa");
+		cout.accept("student:" + student);
 	}
 
 	public static <E> void markList1(List<Integer> lst, int n) {
@@ -30,5 +33,13 @@ public class test {
 		for (int i = 0; i < n; i++) {
 			lst.add(i);
 		}
+	}
+
+	public void aaa(Student student, String name) {
+		updateName(student, name);
+	}
+
+	public void updateName(Student student, String name) {
+		student.setName(name);
 	}
 }
