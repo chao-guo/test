@@ -1,12 +1,15 @@
 package chao.other;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 import java.util.function.Consumer;
 
 public class test {
 
-	static Consumer<String> cout = System.out::println;
+	static Consumer<Object> cout = System.out::println;
 
 	public static void main(String[] args) {
 		/*
@@ -26,12 +29,25 @@ public class test {
 		cout.accept("student:" + student);
 		new test().aaa(student, "aaa");
 		cout.accept("student:" + student);
+
+		Set<String> s = new TreeSet<>(new test().new CaseInsensitiveCompare());
+		s.add("Hello");
+		s.add("HeLLo");
+		cout.accept(s.size());
 	}
 
 	public static <E> void markList1(List<Integer> lst, int n) {
 		lst.clear();
 		for (int i = 0; i < n; i++) {
 			lst.add(i);
+		}
+	}
+
+	class CaseInsensitiveCompare implements Comparator<String>{
+
+		@Override
+		public int compare(String o1, String o2) {
+			return o1.compareToIgnoreCase(o2);
 		}
 	}
 
