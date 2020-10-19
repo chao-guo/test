@@ -12,10 +12,10 @@ public class MyAspect implements MethodInterceptor {
 	@Override
 	public Object invoke(MethodInvocation invocation) throws Throwable {
 		
-		System.out.println("-------aop.spring_aop aspect before-------");
+		System.out.println("-------myaop.spring_aop aspect before-------");
 		//手动执行目标方法
 		Object obj = invocation.proceed();
-		System.out.println("-------aop.spring_aop aspect after-------");
+		System.out.println("-------myaop.spring_aop aspect after-------");
 		return obj;
 	}
 }

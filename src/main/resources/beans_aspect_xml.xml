@@ -13,39 +13,39 @@
 	<bean id="myAspectId"
 		class="chao.spring.aop.d_aspect.xml.MyAspect"></bean>
 	<!-- 3 aop编程
-		 <aop:aspect> 将切面类申明"切面",从而获得通知(方法)
+		 <myaop:aspect> 将切面类申明"切面",从而获得通知(方法)
 			ref 切面类引用
-		<aop:pointcut> 声明一个切入点，所有通知都可以使用。
+		<myaop:pointcut> 声明一个切入点，所有通知都可以使用。
 			expression 切入点表达式
 			id 名称，用于其他通知引用
 		3.1 前置通知
-		<aop:config>
-			<aop:aspect ref="myAspectId">
-				<aop:pointcut expression="execution(* chao.spring.aop.d_aspect.xml.UserServiceImpl.*(..))" id="myPointCut" />
-				<aop:before method="myBefore" pointcut-ref="myPointCut"/>
-			</aop:aspect>
-		</aop:config>
+		<myaop:config>
+			<myaop:aspect ref="myAspectId">
+				<myaop:pointcut expression="execution(* chao.spring.myaop.d_aspect.xml.UserServiceImpl.*(..))" id="myPointCut" />
+				<myaop:before method="myBefore" pointcut-ref="myPointCut"/>
+			</myaop:aspect>
+		</myaop:config>
 		3.2后置通知
-		 <aop:config>
-		 	<aop:aspect ref="myAspectId">
-		 		<aop:pointcut expression="execution(* chao.spring.aop.d_aspect.xml.UserServiceImpl.*(..))" id="myPointCut" />
-		 		<aop:after-returning method="myAfterReturning" pointcut-ref="myPointCut" returning="ret"/>
-		 	</aop:aspect>
-		 </aop:config>
+		 <myaop:config>
+		 	<myaop:aspect ref="myAspectId">
+		 		<myaop:pointcut expression="execution(* chao.spring.myaop.d_aspect.xml.UserServiceImpl.*(..))" id="myPointCut" />
+		 		<myaop:after-returning method="myAfterReturning" pointcut-ref="myPointCut" returning="ret"/>
+		 	</myaop:aspect>
+		 </myaop:config>
 		3.3环绕通知
-	 <aop:config>
-	 	<aop:aspect ref="myAspectId">
-		 	<aop:pointcut expression="execution(* chao.spring.aop.d_aspect.xml.UserServiceImpl.*(..))" id="myPointCut" />
-		 	<aop:around method="myArund" pointcut-ref="myPointCut"/>
-	 	</aop:aspect>
-	 </aop:config>
+	 <myaop:config>
+	 	<myaop:aspect ref="myAspectId">
+		 	<myaop:pointcut expression="execution(* chao.spring.myaop.d_aspect.xml.UserServiceImpl.*(..))" id="myPointCut" />
+		 	<myaop:around method="myArund" pointcut-ref="myPointCut"/>
+	 	</myaop:aspect>
+	 </myaop:config>
 	 	3.4抛出异常通知
-	 <aop:config>
-	 	<aop:aspect ref="myAspectId">
-		 	<aop:pointcut expression="execution(* test.spring.aop.d_aspect.xml.UserServiceImpl.*(..))" id="myPointCut" />
-	 		<aop:after-throwing method="myAfterThrowing" pointcut-ref="myPointCut" throwing="e"/>
-	 	</aop:aspect>
-	 </aop:config>
+	 <myaop:config>
+	 	<myaop:aspect ref="myAspectId">
+		 	<myaop:pointcut expression="execution(* test.spring.myaop.d_aspect.xml.UserServiceImpl.*(..))" id="myPointCut" />
+	 		<myaop:after-throwing method="myAfterThrowing" pointcut-ref="myPointCut" throwing="e"/>
+	 	</myaop:aspect>
+	 </myaop:config>
 	 	3.5最终通知
 	 -->
 	 <aop:config>

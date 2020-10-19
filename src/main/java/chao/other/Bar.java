@@ -10,6 +10,6 @@ public class Bar {
 	}
 
 	public static void main(String[] args) {
-		new Bar().sum(3);
+		System.out.println(new Bar().sum(3));
 	}
 }

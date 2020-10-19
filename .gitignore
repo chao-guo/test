@@ -6,3 +6,5 @@
 /target
 /.settings/
 /jdkResources/
+/.idea/
+.idea/workspace.xml

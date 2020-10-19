@@ -3,15 +3,15 @@ package chao.spring.aop.a_proxy.cglibProxy;
 public class UserService {
 
 	public void addUser() {
-		System.out.println("aop.proxy addUser");
+		System.out.println("myaop.proxy addUser");
 	}
 
 	public void deleteUser() {
-		System.out.println("aop.proxy deleteUser");
+		System.out.println("myaop.proxy deleteUser");
 	}
 
 	public void updateUser() {
-		System.out.println("aop.proxy updateUser");
+		System.out.println("myaop.proxy updateUser");
 	}
 
 }

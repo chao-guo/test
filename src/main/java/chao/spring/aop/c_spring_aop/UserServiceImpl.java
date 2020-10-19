@@ -4,17 +4,17 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public void addUser() {
-		System.out.println("aop.spring_aop addUser");
+		System.out.println("myaop.spring_aop addUser");
 	}
 
 	@Override
 	public void deleteUser() {
-		System.out.println("aop.spring_aop deleteUser");
+		System.out.println("myaop.spring_aop deleteUser");
 	}
 
 	@Override
 	public void updateUser() {
-		System.out.println("aop.spring_aop updateUser");
+		System.out.println("myaop.spring_aop updateUser");
 	}
 
 }

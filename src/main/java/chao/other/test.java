@@ -34,6 +34,9 @@ public class test {
 		s.add("Hello");
 		s.add("HeLLo");
 		cout.accept(s.size());
+
+		Class<?> superclass = a.getClass().getSuperclass();
+		System.out.println(superclass);
 	}
 
 	public static <E> void markList1(List<Integer> lst, int n) {

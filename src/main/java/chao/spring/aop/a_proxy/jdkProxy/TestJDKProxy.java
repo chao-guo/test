@@ -4,8 +4,7 @@ import org.junit.Test;
 
 public class TestJDKProxy {
 
-	@Test
-	public void demo() {
+	public static void main(String[] args) {
 
 		UserService userService = MyBeanFactory.createService();
 		userService.addUser();

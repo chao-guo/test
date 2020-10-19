@@ -3,32 +3,24 @@ package chao.design_pattern.observer;
 import java.util.ArrayList;
 import java.util.List;
 
-/*
- * 被观察者，它将所有观察者对象的引用保存在一个集合中
+/**
+ * @author chao.guo
+ * @Description TODO
+ * @create 2020/08/05 17:39:00
  */
-public class Subject {
+public abstract class Subject {
 
-	// 保存注册的观察者对象
-	private List<Observer> mobservers = new ArrayList<>();
+    private List<Observer> observers = new ArrayList<>();
 
-	// 注册观察者对象
-	public void attach(Observer observer) {
-		mobservers.add(observer);
-		System.out.println("SZH, attach an observer");
-	}
+    public void attach(Observer observer) {
+        observers.add(observer);
+    }
 
-	// 注销观察者对象
-	public void detach(Observer observer) {
-		mobservers.remove(observer);
-		System.out.println("SZH, detach an observer");
-	}
+    public void detach(Observer observer) {
+        observers.remove(observer);
+    }
 
-	// 通知所有注册的观察者对象
-	public void notifyEveryOne(String newState) {
-		for (Observer observer : mobservers) {
-			observer.update(newState);
-		}
-	}
-	
-	
+    public void Notify() {
+        observers.forEach(i -> i.update());
+    }
 }

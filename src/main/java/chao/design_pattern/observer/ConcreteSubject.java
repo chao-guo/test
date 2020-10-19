@@ -1,20 +1,19 @@
 package chao.design_pattern.observer;
 
-/*
- * 具体的被观察者对象
+/**
+ * @author chao.guo
+ * @Description TODO
+ * @create 2020/08/05 17:57:00
  */
 public class ConcreteSubject extends Subject {
 
-	private String state;
+    private String subjectState;
 
-	public String getState() {
-		return state;
-	}
+    public String getSubjectState() {
+        return subjectState;
+    }
 
-	public void change(String newState) {
-		state = newState;
-		System.out.println("SZH, concreteSubject state:" + newState);
-		// 状态发生改变，通知观察者
-		notifyEveryOne(newState);
-	}
+    public void setSubjectState(String subjectState) {
+        this.subjectState = subjectState;
+    }
 }

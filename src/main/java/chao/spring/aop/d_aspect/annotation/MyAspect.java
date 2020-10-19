@@ -19,7 +19,7 @@ public class MyAspect {
 
 	//前置通知
 	//切入点仅当前有效
-//	@Before("execution(* test.spring.aop.d_aspect.annotation.UserServiceImpl.*(..))")
+//	@Before("execution(* test.spring.myaop.d_aspect.annotation.UserServiceImpl.*(..))")
 	public void myBefore(JoinPoint joinPoint) {
 		System.out.println("前置通知:" + joinPoint.getSignature().getName());
 	}
