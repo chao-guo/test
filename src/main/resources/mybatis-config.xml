@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-    <properties resource="jdbc.properties" value="aaa">sssss</properties>
+    <properties resource="jdbc.properties" value="aaa">
+        <property name="jdbc.username" value="coolblog"/>
+        <property name="hello" value="world"/>
+    </properties>
     <settings>
         <setting name="logImpl" value="STDOUT_LOGGING"/>
     </settings>
