@@ -1,25 +1,38 @@
 package chao.json;
 
-public class Address {
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import pcitc.imp.common.ettool.baseresrep.BaseResRep;
 
-	private String name;
-	
-	private String location;
+import java.io.Serializable;
 
-	public String getName() {
-		return name;
-	}
+public class Address extends BaseResRep implements Serializable {
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    private String name;
 
-	public String getLocation() {
-		return location;
-	}
+    private String location;
 
-	public void setLocation(String location) {
-		this.location = location;
-	}
-	
+    public Address() {
+    }
+
+    public Address(String name, String location) {
+        this.name = name;
+        this.location = location;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
 }

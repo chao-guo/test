@@ -6,6 +6,9 @@ public class Car {
 	
 	private String brand;
 
+	public Car() {
+	}
+
 	public String getName() {
 		return name;
 	}

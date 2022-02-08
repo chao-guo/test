@@ -1,48 +1,51 @@
 package chao.json;
 
+import pcitc.imp.common.ettool.baseresrep.BaseResRep;
+
+import java.io.Serializable;
 import java.util.List;
 
-public class Person {
+public class Person extends BaseResRep implements Serializable {
 
-	private String name;
-	
-	private int cardId;
-	
-	private Address address;
-	
-	private List<Car> cars;
-	
-	public List<Car> getCars() {
-		return cars;
-	}
+    private String name;
 
-	public void setCars(List<Car> cars) {
-		this.cars = cars;
-	}
+    private int cardId;
 
-	public String getName() {
-		return name;
-	}
+    private Address address;
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    private List<Car> cars;
 
-	public int getCardId() {
-		return cardId;
-	}
+    public List<Car> getCars() {
+        return cars;
+    }
 
-	public void setCardId(int cardId) {
-		this.cardId = cardId;
-	}
+    public void setCars(List<Car> cars) {
+        this.cars = cars;
+    }
 
-	public Address getAddress() {
-		return address;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public void setAddress(Address address) {
-		this.address = address;
-	}
-	
-	
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getCardId() {
+        return cardId;
+    }
+
+    public void setCardId(int cardId) {
+        this.cardId = cardId;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+
 }
