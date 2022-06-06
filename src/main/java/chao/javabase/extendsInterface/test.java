@@ -1,4 +1,4 @@
-package chao.extendsInterface;
+package chao.javabase.extendsInterface;
 
 import java.sql.Timestamp;
 import java.util.Date;

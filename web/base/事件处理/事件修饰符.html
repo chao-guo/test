@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../vue.js"></script>
+    <style>
+        .list {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            overflow: auto;
+        }
+
+        li {
+            height: 100px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Vue中的事件绑定  
+        .prevent 阻止默认事件
+        .stop 阻止事件冒泡
+        .once 事件只触发一次
+        .capture 使用事件的捕获模式
+        .self 只有event.target是单前操作的元素时才触发事件
+        .passive 事件的默认行为立即执行，无需等待事件回调执行完毕
+    -->
+    <div id="app">
+        <div>{{message}}</div>
+        <a href="http://www.baidu.com" @click.prevent="showAlert">阻止默认事件</a>
+        <div @click="showAlert">
+            <button @click.stop="showAlert">阻止事件冒泡</button>
+        </div>
+        <button @click.once="showAlert">事件只触发一次</button>
+        <div @click.capture="showAlert">
+            <button @click="showAlert">使用事件的捕获模式</button>
+        </div>
+        <div @click.self="showAlert">
+            <button @click.self="showAlert">只有event.target是单前操作的元素时才触发事件</button>
+        </div>
+        <ul @wheel.passive="demo" class="list">事件的默认行为立即执行，无需等待事件回调执行完毕
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    </div>
+    <script>
+        let vm = new Vue({
+            el: "#app",
+            data: function () {
+                return {
+                    message: "Hello world!"
+                }
+            },
+            methods: {
+                showAlert(e) {
+                    console.log(e.target);
+                },
+                demo() {
+                    for (let i = 0; i < 10000; i++) {
+                        console.log("#");                      
+                    }
+                    console.log("@");
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

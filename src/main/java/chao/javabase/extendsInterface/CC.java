@@ -1,4 +1,4 @@
-package chao.extendsInterface;
+package chao.javabase.extendsInterface;
 
 /**
  * @author chao.guo

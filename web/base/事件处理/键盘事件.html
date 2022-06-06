@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../vue.js"></script>
+    <title>键盘事件</title>
+</head>
+
+<body>
+    <div id="app">{{message}}
+        <div>
+            <input type="text" placeholder="按下回车提示输入" @keyup.enter="showInfo">
+        </div>
+    </div>
+    <script>
+        /*
+        按键使用名称，不推荐使用编码，不同的键盘编码可能不一致
+        .enter
+        .tab   (在浏览器带有功能的按键需要配合keyDown使用)
+        .delete (捕获“删除”和“退格”键)
+        .esc
+        .space
+        .up
+        .down
+        .left
+        .right
+        .ctrl
+        .alt
+        .shift
+        .meta
+        */
+        Vue.config.productionTip = false;
+        let vm = new Vue({
+            el: "#app",
+            data: function () {
+                return {
+                    message: "键盘事件"
+                }
+            },
+            methods: {
+                showInfo(e) {
+                    console.log("arguments", arguments);
+                    console.log(e.keyCode);
+                    console.log(e.target.value);
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

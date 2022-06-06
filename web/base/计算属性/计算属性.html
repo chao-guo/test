@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../vue.js"></script>
+    <title>插值语法</title>
+</head>
+
+<body>
+    <div id="root">
+        姓:<input type="text" v-model:value="firstName"><br>
+        名:<input type="text" v-model:value="lastName"><br>
+        姓名：<span>{{fullName}}</span><br>
+    </div>
+</body>
+<script>
+    /* 
+    计算属性：通过已有属性计算得来
+    1.缓存
+    2.要被修改，必须写set函数，且set函数要引起计算时依赖的数据发生改变
+    */
+    Vue.config.productionTip = false;
+    let vm = new Vue({
+        el: '#root',
+        data: {
+            firstName: '张',
+            lastName: '三'
+        },
+        computed: {
+            fullName: {
+                get() {
+                    console.log("get invoked");
+                    return this.firstName + '-' + this.lastName;
+                },
+                set(value) {
+                    console.log("set invoked");
+                    this.firstName = value.split('-')[0];
+                    this.lastName = value.split('-')[1];
+                }
+            }
+        }
+    })
+</script>
+
+</html>

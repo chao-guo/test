@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>performance</title>
+</head>
+
+<body>
+    <script>
+        performance.mark('test-start');
+        setTimeout(function () {
+            performance.mark('test-end');
+            performance.measure('test');
+            let measures = performance.getEntriesByName('test');
+            console.log(measures);
+            console.log("measures[0].duration", measures[0].duration);
+        }, 1000);
+    </script>
+</body>
+
+</html>

@@ -1,12 +1,9 @@
 package chao.util.validate;
 
 import chao.dataandc.test.Student;
-import chao.extendsInterface.A;
 import org.apache.commons.lang.StringUtils;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
